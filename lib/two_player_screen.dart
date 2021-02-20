@@ -11,13 +11,12 @@ class TwoPlayerScreen extends StatefulWidget {
 
 class _TwoPlayerScreenState extends State<TwoPlayerScreen> {
   List<GameButton> bLists;
-  var player1;
+  var player1; //lül
   var player2;
   var activePlayer;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     bLists = doInit();
   }
@@ -49,7 +48,7 @@ class _TwoPlayerScreenState extends State<TwoPlayerScreen> {
         activePlayer = 2;
         player1.add(gButton.id);
       } else {
-        gButton.text = "0";
+        gButton.text = "O";
         gButton.background = Colors.black;
         activePlayer = 1;
         player2.add(gButton.id);
@@ -177,7 +176,7 @@ class _TwoPlayerScreenState extends State<TwoPlayerScreen> {
                         bLists[i].enabled ? () => playGame(bLists[i]) : null,
                     child: Text(
                       bLists[i].text,
-                      style: TextStyle(color: Colors.white, fontSize: 20.0),
+                      style: TextStyle(color: Colors.white, fontSize: 90.0),
                     ),
                     color: bLists[i].background,
                     disabledColor: bLists[i].background,

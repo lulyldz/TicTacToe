@@ -9,6 +9,6 @@ class GameButton {
   GameButton(
       {this.id,
       this.text = "",
-      this.background = Colors.grey,
+      this.background = Colors.amber,
       this.enabled = true});
 }

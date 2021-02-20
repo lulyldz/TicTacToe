@@ -17,7 +17,10 @@ class PopUp extends StatelessWidget {
         FlatButton(
           onPressed: callback,
           color: Colors.amber,
-          child: Text(popupText),
+          child: Text(
+            popupText,
+            style: TextStyle(color: Colors.white),
+          ),
         )
       ],
     );

@@ -48,7 +48,7 @@ class _OnePlayerScreenState extends State<OnePlayerScreen> {
         activePlayer = 2;
         player1.add(gButton.id);
       } else {
-        gButton.text = "0";
+        gButton.text = "O";
         gButton.background = Colors.black;
         activePlayer = 1;
         player2.add(gButton.id);
@@ -194,7 +194,7 @@ class _OnePlayerScreenState extends State<OnePlayerScreen> {
                         bLists[i].enabled ? () => playGame(bLists[i]) : null,
                     child: Text(
                       bLists[i].text,
-                      style: TextStyle(color: Colors.white, fontSize: 20.0),
+                      style: TextStyle(color: Colors.white, fontSize: 90.0),
                     ),
                     color: bLists[i].background,
                     disabledColor: bLists[i].background,
@@ -207,7 +207,7 @@ class _OnePlayerScreenState extends State<OnePlayerScreen> {
                 "Reset",
                 style: TextStyle(color: Colors.white, fontSize: 20.0),
               ),
-              color: Colors.red,
+              color: Colors.amber,
               padding: const EdgeInsets.all(20.0),
               onPressed: resetGame,
             )

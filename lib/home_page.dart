@@ -24,7 +24,6 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            width: double.infinity,
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Center(
               child: Text(
@@ -38,19 +37,34 @@ class HomePage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 60,
+            height: 100,
           ),
           RaisedButton(
             onPressed: () {
               gotoOne_Pscreen(context);
             },
-            child: Text('One Player'),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(40.0),
+                side: BorderSide(color: Colors.amber)),
+            color: Colors.amber.shade50,
+            textColor: Colors.amber[600],
+            padding: EdgeInsets.all(40.0),
+            child: Text('One Player', style: TextStyle(fontSize: 25)),
+          ),
+          SizedBox(
+            height: 100,
           ),
           RaisedButton(
             onPressed: () {
               gotoTwo_Pscreen(context);
             },
-            child: Text('Two Player'),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(40.0),
+                side: BorderSide(color: Colors.amber)),
+            color: Colors.amber.shade50,
+            textColor: Colors.amber[600],
+            padding: EdgeInsets.all(40.0),
+            child: Text('Two Player', style: TextStyle(fontSize: 25)),
           )
         ],
       ),
